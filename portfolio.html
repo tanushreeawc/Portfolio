@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.google.com/specimen/Lugrasimo' rel='stylesheet'>
+  <link rel="import" href="homepage.html"/>
+  <link rel="import" href="contact.html"/>
+  <title>My Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #ff7f50;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #ff7f50;
+      color: #fff;
+      padding: 50px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    /* Navigation Styles */
+    nav {
+      background-color: #555;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff7f50;
+    }
+    
+    /* Hero Section Styles */
+    .hero {
+      background-image: linear-gradient(to right, #ff7f50, #000000);
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: fadeInAnimation 1s ease-in forwards;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      animation: fadeInAnimation 1s ease-in 0.5s forwards;
+    }
+    
+    .hero a {
+      background-color: #fff;
+      color: #ff7f50;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .hero a:hover {
+      background-color: #ff7f50;
+      color: #fff;
+    }
+    
+    /* Projects Section Styles */
+    .projects {
+      padding: 50px;
+      text-align: center;
+
+    }
+    
+    .project-item {
+      display: inline-block;
+      border: solid black 2px;
+      margin: 20px;
+      text-align: left;
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      animation: fadeInAnimation 1s ease-in forwards;
+    }
+    
+    .project-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .project-item h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .project-item p {
+      margin-bottom: 20px;
+    }
+    
+    /* Contact Section Styles */
+    .contact {
+      background-color: #555;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .contact h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: slideInRightAnimation 0.5s ease-in-out forwards;
+    }
+    
+    .contact p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      animation: slideInRightAnimation 0.5s ease-in-out 0.5s forwards;
+    }
+    
+    .contact button {
+      background-color: #fff;
+      color: #ff7f50;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .contact button:hover {
+      background-color: #ff7f50;
+      color: #fff;
+    }
+    
+    /* Additional Styles and Animations */
+    @keyframes fadeInAnimation {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes slideInRightAnimation {
+      0% {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Optimization Techniques */
+    @media (prefers-reduced-motion: reduce) {
+      .hero h2,
+      .hero p,
+      .contact h2,
+      .contact p,
+      .project-item {
+        animation: none;
+      }
+    }
+    
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .project-item {
+        width: 100%;
+      }
+    }
+    /* Resume Section Styles */
+.resume {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.resume h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  animation: slideInRightAnimation 0.5s ease-in-out forwards;
+}
+
+.resume p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  animation: slideInRightAnimation 0.5s ease-in-out 0.5s forwards;
+}
+
+.resume a {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.resume a:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="font-family: 'Lugrasimo';"><u>Tanushree Awchat</u></h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://drive.google.com/file/d/1wJictslMg8B8ey5dFFTdEXBAmeKW41ju/view?usp=sharing">Resume</a></li> 
+    </ul>
+  </nav>
+  
+  <section id="hero" class="hero">
+    <h2>Welcome to My Portfolio!</h2>
+    <p>I am a Web developer and Programmer. <br>Check out my projects below.</p>
+    <a href="#projects">View Projects</a>
+  </section>
+  
+  <section id="projects" class="projects">
+    <div class="project-item">
+      <h3>Project 1</h3>
+      <p> In my project, I developed an IoT application using the ESP32CAM module and a motion detection sensor. The project was implemented using the C programming language, and its main objective was to detect motion and transmit real-time video data over the internet.</p>
+    </div>
+    
+    <div class="project-item">
+      <h3>Project 2</h3>
+      <p>Presenting my Webinar Page , your gateway to extraordinary growth.</p><br><br><br><br>
+      <a href="https://github.com/tanushreeawc/webinar.git">Learn More</a>
+    </div>
+  
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+    <button><a href="contact.html">Contact</a></button>
+  </section>
+  
+  <script>
+    // Scroll animation for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+   
+  // Scroll animation for navigation
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const href = this.getAttribute('href');
+      
+      if (href === 'homepage.html') {
+        window.location.href = href;
+      } else if (href === 'contact.html') {
+        window.location.href = href;
+      } else if (href === 'https://drive.google.com/file/d/1jveC0HE2SjZJMNGaschrOjski2hxiWod/view?usp=drivesdk') {
+        window.location.href = href;
+      } else {
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+
+  </script>
+</body>
+</html>

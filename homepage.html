@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.google.com/specimen/Lugrasimo' rel='stylesheet'>
+  <title>My Portfolio - Homepage</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: Black;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: #000000;
+      color: purple;
+      padding: 50px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    /* Navigation Styles */
+    nav {
+      background-color: #000000;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #ff8c00;
+    }
+    
+    /* Homepage Section Styles */
+    .homepage {
+      position: relative;
+      /* min-height: 100vh; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .homepage:before,
+    .homepage:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+    
+    .homepage:before {
+      top: 0;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJFBMVEUCAEvmAKwGAIxwAKXCALYBAEUGAJB1AKdoAKTHALe/ALfpAKu8NR+zAAABBklEQVR4nO3QuQGAIAAEMAR53X9fd7iGJhkhpUT6qJHZEmu/ifM9kazEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiZO7Jz+ht6UbMNGF/gAAAABJRU5ErkJggg==');
+    }
+    
+    .homepage:after {
+      bottom: 0;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAJFBMVEUCAEvmAKwGAIxwAKXCALYBAEUGAJB1AKdoAKTHALe/ALfpAKu8NR+zAAABBklEQVR4nO3QuQGAIAAEMAR53X9fd7iGJhkhpUT6qJHZEmu/ifM9kazEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiRMnTpw4ceLEiZO7Jz+ht6UbMNGF/gAAAABJRU5ErkJggg==');
+    }
+    
+    .homepage h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      animation: slideInUpAnimation 0.5s ease-in-out forwards;
+    }
+    
+    .homepage p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      animation: slideInUpAnimation 0.5s ease-in-out 0.5s forwards;
+    }
+    
+    /* Make the profile picture a square */
+    .profile-pic {
+      width: 284px;
+      height: 292px;
+      border-radius:50%;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .homepage a {
+      background-color: #000000;
+      color: #ff8c00;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .homepage a:hover {
+      background-color: #000000;
+      color: #fff;
+    }
+    
+    /* Additional Styles and Animations */
+    @keyframes slideInUpAnimation {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Optimization Techniques */
+    @media (prefers-reduced-motion: reduce) {
+      .homepage h2,
+      .homepage p,
+      .homepage img {
+        animation: none;
+      }
+    }
+    
+    /* Introduction Box */
+    .introduction {
+      background-color: #fff;
+      color: Blue;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px;
+    }
+    
+    /* Top of the Page Styles */
+    .top-section {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .top-section h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .top-section p {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    /* Media Query for Responsiveness */
+    @media (max-width: 768px) {
+      .homepage {
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-section">
+    <header>
+      <h1 style="font-family: 'Lugrasimo';"><u>Tanushree Awchat</u></h1>
+    </header>
+    
+    <!-- <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> -->
+    
+    <section class="homepage">
+      <div class="profile-pic">
+        <img src="https://media.licdn.com/dms/image/D5603AQGfjK71brWW1Q/profile-displayphoto-shrink_800_800/0/1686643955296?e=1696464000&v=beta&t=4jQx1LSBTbnnRZ55VTFqQuCzAccvu7bH_pBfBWCMx8A" alt="Profile Picture">
+      </div>
+      <div class="introduction">
+        <h2>Welcome to My Portfolio!</h2>
+        <p>Welcome to my portfolio, where simplicity meets creativity in the world of web development.</p>
+        <p>Portfolio is a testament to my continuous learning and the drive to stay ahead in this ever-evolving digital landscape. It's been an incredible journey of honing skills, tackling challenges, and transforming ideas into reality.</p>
+        <p>Web development isn't just about lines of code; it's about solving real-world problems and making a positive impact. With every project, I aim to create digital solutions that elevate businesses and delight users.</p>
+        <a href="portfolio.html">View Portfolio</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Projects Section -->
+  
+
+  <!-- Contact Section
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to get in touch with me for any project collaborations or inquiries.</p>
+    <a href="mailto:your.email@example.com">Email Me</a>
+  </section> -->
+  
+</body>
+</html>
